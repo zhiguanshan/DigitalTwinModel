@@ -1,0 +1,56 @@
+{
+	"policyID":"org.eclipse.ditto:my-policy",
+  "entries": {
+    "owner": {
+      "subjects": {
+        "nginx:ditto": {
+          "type": "nginx basic auth user"
+        }
+      },
+      "resources": {
+        "thing:/": {
+          "grant": ["READ", "WRITE"],
+          "revoke": []
+        },
+        "policy:/": {
+          "grant": ["READ", "WRITE"],
+          "revoke": []
+        },
+        "message:/": {
+          "grant": ["READ", "WRITE"],
+          "revoke": []
+        }
+      }
+    },
+    "observer": {
+      "subjects": {
+        "nginx:observer-client": {
+          "type": "technical client"
+        }
+      },
+      "resources": {
+        "thing:/features/transmission": {
+          "grant": ["READ","WRITE"],
+          "revoke": []
+        },
+        "thing:/features/sensor": {
+          "grant": ["READ"],
+          "revoke": []
+        }
+      }
+    },
+    "private": {
+      "subjects": {
+        "nginx:interviewer": {
+          "type": "nginx basic auth user"
+        },
+        "resources": {
+          "thing:/features/feature": {
+            "grant": [],
+            "revoke": ["READ"]
+          }
+        }
+      }
+    }
+  }
+}
