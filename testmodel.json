@@ -1,0 +1,14 @@
+{
+  "@type": "digitaltwin:ThingModel",
+  "title": "Digital Twin Test-Car",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "dimmer-level": {
+      "title": "Camera Data",
+      "type": "matrix",
+	"size":"320*240"
+    }
+  }
+}
