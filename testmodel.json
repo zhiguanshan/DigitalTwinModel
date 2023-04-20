@@ -15,5 +15,10 @@
 			"type":"signal matrix",
 			"size":"4*240*120"
 		}
-  }
+  },
+	"features":{
+		"aa":{
+			"title":"test"
+		}
+	}
 }
