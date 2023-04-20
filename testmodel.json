@@ -5,10 +5,15 @@
     "model": "1.0.0"
   },
   "properties": {
-    "dimmer-level": {
+    "camera-data": {
       "title": "Camera Data",
-      "type": "matrix",
-	"size":"320*240"
-    }
+      "type": "uint8 matrix",
+			"size":"320*240"
+    },
+	  "pointcloud-data":{
+			"title":"PointCloud Data",
+			"type":"signal matrix",
+			"size":"4*240*120"
+		}
   }
 }
